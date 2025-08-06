@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method="dialog">
+        <div class="div">
+            <div class="div-1">
+                <label for="player1">Player 1's name</label>
+                <input placeholder="Name" type="text" id="player1" name="player1" required>
+            </div>
+            <div class="div-2">
+                <label for="player2">Player 2's name</label>
+                <input placeholder="Name" type="text" id="player2" name="player2" required>
+            </div>
+            <button type="submit" class="play-btn">PLAY</button>
+        </div>
+    </form>
+    <main>
+        <div>
+            <div class="turn"></div>
+            <div class="container"></div>
+            <div class="notify"></div>
+            <div class="score"></div>
+            <div class="btn-div">
+                <button class="reset-board">Restart Board</button>
+                <button class="reset-score">Reset Score</button>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/newBoard.js" defer></script>
+</body>
+</html>

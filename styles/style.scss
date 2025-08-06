@@ -1,0 +1,130 @@
+.disable-btn{
+    pointer-events: none;
+}
+
+form{
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    .div{
+        
+        height: 80vh;
+        width: 80vw;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        &-1{
+            display: flex;
+            flex-direction: column;
+            font-size: 4rem;
+            color: beige;
+        }
+        &-2{
+            display: flex;
+            flex-direction: column;
+            font-size: 4rem;
+            color: beige
+        }
+        input{
+            height: 10%; 
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 2rem;
+            box-shadow: 10px 10px 10px rgb(152, 136, 21);
+        }
+         button{
+            position: absolute;
+            top: 50%;
+            font-size: 4rem;
+            padding: 15px 15px;
+            border-radius: 10px;
+            background-color: rgb(103, 103, 103);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.15s ease-in;
+            &:hover{
+                background-color: rgb(167, 166, 166);
+            }
+        }
+    }
+}
+
+main{
+    display: none;
+    background-color: blueviolet;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        .turn{
+        font-size: 2rem;
+        background-color: lightblue;
+        border: 2px solid black;
+        border-radius: 5px;
+        width: 620px;
+        }
+        .container{
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        gap: 10px;
+        .box{
+            height: 130px;
+            width: 200px;
+            background-color: lightpink;
+            cursor: pointer;
+            font-size: 6rem;
+            color: black;
+            &:hover{
+                scale: 1.1;
+                background-color: rgb(248, 148, 163);
+            }
+            &:focus{ 
+                border: 2px solid black;
+            }
+            }
+        }
+        .score{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;;
+            color:beige;
+            width: 30vw;
+            font-size: 2.5rem;
+            margin: 0px;
+        }
+        .notify{
+            font-size: 3rem;    
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            display: flex;
+        }
+        .btn-div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 20px;
+            button{
+                cursor: pointer;
+                font-size: 2rem;
+                color: white;
+                padding: 15px 15px;
+                border-radius: 5px;
+                border: none;
+                background-color: rgb(36, 176, 192);
+                transition: 0.15s ease-in;
+                &:hover{
+                    scale: 1.1;
+                    background-color: rgb(36, 176, 192);
+                }
+            }
+        }
+    }
+        
+}
