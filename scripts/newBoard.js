@@ -127,11 +127,15 @@ function GameController(){
     }
 
     const winner = () =>{
+        notify.style.display = 'block';
         const notification = document.createElement("p");
         notification.textContent = `${activePLayer.name} won`
         notify.appendChild(notification);
         activePLayer.score++;
         switchPlayer();
+        setTimeout(() => {
+            notify.style.display = 'none';
+        }, 2000);
     }
 
     const playRound = (row, cell) => {
