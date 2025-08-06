@@ -71,6 +71,7 @@ function GameController(){
     const getActivePLayer = () => activePLayer;
     const getPlayers = () => players;
     const checkWin = () => {
+        let tie = 0;
         const check = board.getBoard();
         for (let i = 0; i < 3; i++){
             let counter = 0
@@ -112,10 +113,18 @@ function GameController(){
                         winner();
                     }
                 }
-                
+                if (check[i][j].getValue() === "X" || check[i][j].getValue() === "O"){
+                    tie++;
+                    if (tie === 9 && counter < 3 && col < 3 && swing_left < 3 && res < 3){
+                        resetGame(check);
+                        Tie();
+                    }
+                }
             }
+            
         }
     }
+
     const notify = document.querySelector(".notify");
     const resetGame = (check) => {
         notify.textContent = '';
@@ -138,6 +147,16 @@ function GameController(){
         }, 2000);
     }
 
+    const Tie = () =>{
+        notify.style.display = 'block';
+        const notification = document.createElement("p");
+        notification.textContent = `Tie`
+        notify.appendChild(notification);
+        switchPlayer();
+        setTimeout(() => {
+            notify.style.display = 'none';
+        }, 2000);
+    }
     const playRound = (row, cell) => {
         board.addValue(row, cell, getActivePLayer().token);
         checkWin();
